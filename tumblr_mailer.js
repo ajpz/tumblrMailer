@@ -25,8 +25,8 @@ function createAndSendEmail(emailTemplate, recipList, latestPosts) {
 				numMonthsSinceContact: contact.numMonthsSinceContact,
 				latestPosts: latestPosts
 			});
-		console.log('email sent to: '+contact.emailAddress); 
-		// sendEmail(contact.firstName, contact.emailAddress, 'Jonathan', 'perez.jonathan@gmail.com', 'Keeping you blog-to-date!', customTemplate)
+		// console.log('email sent to: '+contact.emailAddress); 
+		sendEmail(contact.firstName, contact.emailAddress, 'Jonathan', 'perez.jonathan@gmail.com', 'Keeping you blog-to-date!', customTemplate)
 	})
 }
 /********************************************************
