@@ -1,0 +1,28 @@
+<html>
+<head><meta charset='utf-8'></head>
+<body>
+  <p>Hey <%= firstName %>,</p>
+  <br>
+  <p>
+    How are you? <% if(numMonthsSinceContact > 0) {%>It's been <%=numMonthsSinceContact%> month(s) since we last spoke.<% } %>
+    As you may (or may not) know, I've been learning to code and have enrolled in a full-time, web development bootcamp called
+    Fullstack Academy. It's been great so far. In fact, this email is a project -- I wrote a program in javascript, running in 
+    the node environment, that automatically creates and sends emails to my contacts. I've been writing blog posts about my 
+    experiences so far, and thought I'd share them with you. My posts are on Tumblr, and I've used their API to be able to 
+    systematically pull down my latest ramblings.
+  </p>
+  <p>
+    If you are interested, here are a few of my more recent posts: 
+    <ul>
+      <% for(var i=0; i<latestPosts.length; i++) {%>
+         <li><a href=<%= latestPosts[i].post_url %>> <%= latestPosts[i].title %></a>  </li>
+      <% } %>
+    </ul>
+  </p>
+
+  <p>
+    All the best,<br>
+    Jonathan
+  </p>
+</body>
+</html>
